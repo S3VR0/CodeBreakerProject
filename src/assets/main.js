@@ -32,8 +32,7 @@ function setHiddenFields() {
     while (answer.length < 4) {
         answer = "0" + answer;
     }
-    answer.value = answer;
-    return answer.value;
+    return answer;
 }
 function setMessage(a) {
     message = document.getElementById("message");
@@ -53,12 +52,12 @@ function getResults(userInput) {
     results = document.getElementById("results");
     var correctNum = 0;
     var resultNum = '<div class="row">' + '<span class="col-md-6">' + userInput + '</span>';
-    var resultDiv = '<div class="col-md-6">';
+    var resultDiv = '<span class="col-md-6">';
     for (var charCount = 0; charCount < userInput.length; charCount ++) {
      if (userInput.charAt(charCount) == answer.charAt(charCount)) {
          resultDiv += '<span class="glyphicon glyphicon-ok">' + '</span>';
          correctNum ++;
-     } else if (userInput.charAt(charCount) == answer.charAt(0) || userInput.charAt(charCount) == answer.charAt(1) || userInput.charAt(charCount) == answer.charAt(2) || userInput.charAt(charCount) == answer.charAt(3)) {
+     } else if (answer.indexOf(userInput.charAt(charCount)) != -1) {
          resultDiv += '<span class="glyphicon glyphicon-transfer">' + '</span>';
      } else {
          resultDiv += '<span class="glyphicon glyphicon-remove">' + '</span>' ;

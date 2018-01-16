@@ -1,20 +1,67 @@
+body {
+    background: linear-gradient(to top, #000, #002);
+    color: white;
+    height: 100vh;
+}
+h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+}
+
 .code {
   font-size: 50px;
-  padding-left: 70px;
+    text-align: center;
 }
 
 .failure {
-  color: #d9534f;
+  color: #F00;
 }
 
 .success {
-  color: #5cb85c;
+  color: #0F0;
 }
 
 .form-inline {
   margin-bottom: 10px;
+    text-align: center;
 }
 
 .message {
   font-weight: bold;
+    font-size: 20px;
+    padding: 20px 0 0 0;
+    text-align: center;
+}
+.obj {
+    text-align: center;
+}
+.row {
+    text-align: center;
+}
+ #results .row {
+        padding: 8px;
+        border-bottom: 1px dotted #666;
+    }
+.glyphicon-ok {
+    color: green;
+    padding: 0 2px;
+}
+.glyphicon-transfer {
+    color: yellow;
+    padding: 0 2px;
+}
+.glyphicon-remove {
+    color: red;
+    padding:  0 2px ;
+}
+@media screen and (max-width: 770px) {
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #user-guess {
+        text-align: center;
+    }
 }

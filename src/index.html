@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="col-md-6">
+      <div class="col-md-6 left">
         <h1>Code Breaker</h1>
         <div class="row">
           <p id="code" class="code">
@@ -22,11 +22,11 @@
           <input type="hidden" id="attempt"/>
           <input type="hidden" id="answer"/>
           <input id="user-guess" class="form-control" type="number" />
-          <button class="btn btn-primary" onclick="guess()">Submit Guess</button>
+          <button class="btn btn-warning" onclick="guess()">Submit Guess</button>
         </div>
 
         <div id="replay-div" class="row" style="display:none">
-          <button class="btn btn-primary" onclick="window.location.reload()">Play again?</button>
+          <button class="btn btn-danger" onclick="window.location.reload()">Play again?</button>
         </div>
 
         <div class="row">
@@ -35,13 +35,13 @@
 
         <div class="row" id="results">
           <div class="row">
-            <strong class="col-md-6">Guess</strong>
-            <strong class="col-md-6">Result</strong>
+            <strong class="col-md-6 ">Guess</strong>
+            <strong class="col-md-6 lol">Result</strong>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-6 obj">
         <h2>Objective:</h2>
         <p class="lead">Guess the randomly generated 4 digit code.</p>
 
@@ -60,7 +60,7 @@
           </li>
           <li>
             <span class="glyphicon glyphicon-transfer"></span>
-            Doesn't consider how many times a number exists in the code.
+            Doesn't consider how many times a number exists in the code.<br /> Possible that a previously correct number can occur more than once.
           </li>
           <li>
             <span class="glyphicon glyphicon-remove"></span>
