@@ -31,8 +31,9 @@ function setHiddenFields() {
     attempt = 0;
     while (answer.length < 4) {
         answer = "0" + answer;
-    }  
-    return answer;
+    }
+    answer.value = answer;
+    return answer.value;
 }
 function setMessage(a) {
     message = document.getElementById("message");
